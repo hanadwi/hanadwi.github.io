@@ -1,0 +1,57 @@
+<section id='contact' class='section contact-section' data-bg='#FFF9C4' data-color='dark' >
+	<div class='container-fluid' >
+		
+		<div class='section-header text-center' >
+			<h2>Contact Me</h2>
+			<div class='divider' >
+				<img src='{{ "/assets/img/wave.png" | relative_url }}' alt>
+			</div>
+		</div>
+		
+		<div class='row' >
+			<div class='col-md-8 col-md-offset-2' >
+				
+				<form id='contact-form' class='contact-form font-alt' data-toggle='validator' method='post' >
+					
+					<!--contact-form-result-->
+					<div id='contact-form-result' ></div>
+					
+					<div class='row' >
+						
+						<div class='col-md-6' >
+							<div class='form-group' >
+								<input type='text' name='name' class='form-control' placeholder='Name' required>
+								<div class='help-block with-errors' ></div>
+							</div>
+						</div>
+						
+						<div class='col-md-6' >
+							<div class='form-group' >
+								<input type='email' name='email' class='form-control' placeholder='Email' required>
+								<div class='help-block with-errors' ></div>
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class='form-group' >
+						<input type='text' name='subject' class='form-control' placeholder='Subject' required>
+						<div class='help-block with-errors' ></div>
+					</div>
+					
+					<div class='form-group' >
+						<textarea class='form-control' name='message' rows='6' placeholder='Message' required></textarea>
+						<div class='help-block with-errors' ></div>
+					</div>
+					
+					<div class='form-group text-center' >
+						<button type='submit' class='btn-custom' >
+							Send Message
+						</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

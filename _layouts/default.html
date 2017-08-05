@@ -1,20 +1,82 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang='{{ page.lang | default: site.lang | default: "en" }}' >
+	
+	{% include head.html %}
 
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {% include footer.html %}
-
-  </body>
-
+	<body>
+		
+		<!--=============================================
+			Preloader
+		=============================================-->
+		<div id='preloader' >
+			<div class='loader' >
+				<img src='{{ "/assets/img/loader.gif" | relative_url }}' alt>
+			</div>
+		</div>
+		
+		<!--=============================================
+			Hire Btn
+		=============================================-->
+		<a href='#contact' class='hire-me font-alt section-link' >
+			Hire Me
+		</a>
+		
+		<!--=============================================
+			Menu Button
+		=============================================-->
+		<a href='#' class='menu-btn' >
+			<span class='l1' ></span>
+			<span class='l2' ></span>
+			<span class='l3' ></span>
+		</a>
+		
+		<!--=============================================
+			Navigation
+		=============================================-->
+		{% include navigation.html %}
+		
+		<!--=============================================
+			Main Wrapper
+		=============================================-->
+		<div id='main-wrapper' >
+		
+			<!--=============================================
+				Preloader
+			=============================================-->
+			{% include elements/home.html %}
+			
+			<!--=============================================
+				About Section
+			=============================================-->
+			{% include elements/about.html %}
+			
+			<!--=============================================
+				Portfolio Section
+			=============================================-->
+			{% include elements/portfolio.html %}
+			
+			<!--=============================================
+				Resume Section
+			=============================================-->
+			{% include elements/resume.html %}
+			
+			<!--=============================================
+				Blog Section
+			=============================================-->
+			{% include elements/blog.html %}
+			
+			<!--=============================================
+				Contact Section
+			=============================================-->
+			{% include elements/contact.html %}
+			
+		</div>
+		
+		
+		<!--=============================================
+			JavaScript Files
+		=============================================-->
+		{% include footer.html %}
+		
+	</body>
 </html>
